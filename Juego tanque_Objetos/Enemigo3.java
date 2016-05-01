@@ -14,6 +14,6 @@ public class Enemigo3 extends Enemigo
      */
     public void act() 
     {
-        // Add your action code here.
+        //super.act();
     }    
 }

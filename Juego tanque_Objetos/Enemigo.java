@@ -13,6 +13,9 @@ public class Enemigo extends MoverObjetos
     public void act() 
     {
         muevete();
+        dispara();
+        tiempoGiro++;
+        velocidad++;
     }
     public void muevete()
     {
@@ -68,8 +71,12 @@ public class Enemigo extends MoverObjetos
             }
         }
     /**
-    * Cambia la Direccion dependiendo hacia donde se haya girado
-    */
+     * Cambia la Direccion dependiendo hacia donde se haya girado
+     * 270= Arriba
+     * 90= Abajo
+     * 0= Deracha
+     * 180=Izquierda
+     */
     public void cambiaDireccion(int Rotacion)
      {
        if (Rotacion==270 || Rotacion==-90)
@@ -84,4 +91,19 @@ public class Enemigo extends MoverObjetos
        if(Rotacion==180 || Rotacion==-180)
           direccion=4;
         }    
+     /**
+     * Metodo que hace disparar al enemigo en la posicion X,Y del enemigo
+     */    
+    public void dispara()
+    {
+        if(velocidadBala%10 == 0)
+        {
+            Actor A=new Bala_Enemigo(getRotation()); //crea la bala del enemigo
+            
+            int x=getX();
+            int y=getY();
+            World world=getWorld();
+            world.addObject(A,x,y);
+        }
+    }
 }

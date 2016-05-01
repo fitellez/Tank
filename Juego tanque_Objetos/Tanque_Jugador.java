@@ -80,7 +80,7 @@ public class Tanque_Jugador extends MoverObjetos
     }
     
     /**
-     * Cambia la Direccion dependiendo hacia donde se haya girado
+     * Cambia la Direccion del tanque del jugador dependiendo hacia donde se haya girado
      * 270= Arriba
      * 90= Abajo
      * 0= Deracha
