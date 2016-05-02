@@ -15,6 +15,7 @@ public class Enemigo extends MoverObjetos
         muevete();
         dispara();
         tiempoGiro++;
+        velocidadBala++;
         velocidad++;
     }
     public void muevete()
@@ -96,14 +97,13 @@ public class Enemigo extends MoverObjetos
      */    
     public void dispara()
     {
-        if(velocidadBala%10 == 0)
+        if(velocidadBala%70 == 0)
         {
-            Actor A=new Bala_Enemigo(getRotation()); //crea la bala del enemigo
-            
+            Actor Bala=new Bala_Enemigo(getRotation()); //crea la bala del enemigo
             int x=getX();
             int y=getY();
             World world=getWorld();
-            world.addObject(A,x,y);
+            world.addObject(Bala,x,y);
         }
     }
 }

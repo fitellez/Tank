@@ -258,6 +258,27 @@ public class MyWorld extends World
         Enemigo2 enemigo26 = new Enemigo2();
         addObject(enemigo26,498,33);
         enemigo26.setLocation(494,28);
+        removeObject(enemigo22);
+        removeObject(enemigo26);
+        removeObject(enemigo24);
+        removeObject(enemigo2);
+        removeObject(enemigo23);
+        enemigo25.setLocation(358,290);
+        Enemigo2 enemigo27 = new Enemigo2();
+        addObject(enemigo27,227,237);
+        Enemigo2 enemigo28 = new Enemigo2();
+        addObject(enemigo28,56,276);
+        enemigo27.setLocation(204,28);
+        enemigo28.setLocation(52,97);
+        Enemigo2 enemigo29 = new Enemigo2();
+        addObject(enemigo29,173,113);
+        Enemigo2 enemigo210 = new Enemigo2();
+        addObject(enemigo210,582,47);
+        enemigo25.setLocation(385,303);
+        enemigo210.setLocation(476,41);
+        removeObject(enemigo210);
+        Enemigo2 enemigo211 = new Enemigo2();
+        addObject(enemigo211,467,51);
     }
     
     /**Crea el tanque del jugador en la posicion X,Y seleccionados
